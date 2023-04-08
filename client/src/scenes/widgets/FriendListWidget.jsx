@@ -5,32 +5,32 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
 
-const FriendListWidget =({userId}) => {
+const FriendListWidget = ({ userId }) => {
 
-    const dispatch = useDispatch();
-    const { palette } = useTheme();
-    const token = useSelector((state) => state.token);
-    const friends = useSelector((state) => state.user.friends);
-    
-    const getFriends = async () => {
-        const response = await fetch(
-          `http://localhost:3001/users/${userId}/friends`,
-          {
-            method: "GET",
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
-        const data = await response.json();
-        dispatch(setFriends({ friends: data }));
-      };
+  const dispatch = useDispatch();
+  const { palette } = useTheme();
+  const token = useSelector((state) => state.token);
+  const friends = useSelector((state) => state.user.friends);
 
-      useEffect(()=>{
-        getFriends();
-      }, []); //eslint-disable-line react-hooks/exhaustive-deps
+  const getFriends = async () => {
+    const response = await fetch(
+      `http://localhost:3001/users/${userId}/friends`,
+      {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+    const data = await response.json();
+    dispatch(setFriends({ friends: data }));
+  };
 
-      return (
-        <WidgetWrapper>
-          <Typography
+  useEffect(() => {
+    getFriends();
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <WidgetWrapper>
+      <Typography
         color={palette.neutral.dark}
         variant="h5"
         fontWeight="500"
@@ -48,9 +48,9 @@ const FriendListWidget =({userId}) => {
             userPicturePath={friend.picturePath}
           />
         ))}
-      </Box>  
-        </WidgetWrapper>
-      )
+      </Box>
+    </WidgetWrapper>
+  )
 
 }
 
