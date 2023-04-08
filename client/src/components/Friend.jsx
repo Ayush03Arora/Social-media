@@ -20,11 +20,13 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const medium = palette.neutral.medium;
   Array.from(friends);
 
+  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+
   const isFriend = friends.find((friend) => friend._id === friendId);
 
   const patchFriend = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${_id}/${friendId}`,
+      `${url}/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
