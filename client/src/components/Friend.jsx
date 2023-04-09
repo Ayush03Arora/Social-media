@@ -20,7 +20,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const medium = palette.neutral.medium;
   Array.from(friends);
 
-  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+  const url = 'https://socialmediaserver-fwoj.onrender.com';
 
   const isFriend = friends.find((friend) => friend._id === friendId);
 

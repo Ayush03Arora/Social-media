@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 
 const UserImage = ({ image, size = "60px" }) => {
-    const url = 'https://socialmediaserver-fwoj.onrender.com/';
+    const url = 'https://socialmediaserver-fwoj.onrender.com';
     return (
         <Box width={size} height={size}>
             <img

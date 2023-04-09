@@ -21,7 +21,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
-  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+  const url = 'https://socialmediaserver-fwoj.onrender.com';
 
   const getUser = async () => {
     const response = await fetch(`${url}/users/${userId}`, {

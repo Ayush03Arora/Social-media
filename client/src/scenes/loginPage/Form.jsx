@@ -55,7 +55,7 @@ const Form = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
-  const url ='https://socialmediaserver-fwoj.onrender.com/'
+  const url ='https://socialmediaserver-fwoj.onrender.com'
 
   const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image
@@ -64,7 +64,7 @@ const Form = () => {
       formData.append(value, values[value]);
     }
     formData.append("picturePath", values.picture.name);
-
+     
     const savedUserResponse = await fetch(
       `${url}/auth/register`,
       {

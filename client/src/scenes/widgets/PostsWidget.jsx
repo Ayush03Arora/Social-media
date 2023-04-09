@@ -7,7 +7,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
   const token = useSelector((state) => state.token);
-  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+  const url = 'https://socialmediaserver-fwoj.onrender.com';
 
   const getPosts = async () => {
     const response = await fetch(`${url}/posts`, {

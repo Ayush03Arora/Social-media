@@ -12,7 +12,7 @@ const FriendListWidget = ({ userId }) => {
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
 
-  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+  const url = 'https://socialmediaserver-fwoj.onrender.com';
 
   const getFriends = async () => {
     const response = await fetch(

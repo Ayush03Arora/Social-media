@@ -37,7 +37,7 @@ const MyPostWidget = ({ picturePath }) => {
   const mediumMain = palette.neutral.mediumMain;
   const medium = palette.neutral.medium;
 
-  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+  const url = 'https://socialmediaserver-fwoj.onrender.com';
 
   const handlePost = async () => {
     const formData = new FormData();

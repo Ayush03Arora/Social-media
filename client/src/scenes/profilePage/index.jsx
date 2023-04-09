@@ -17,7 +17,7 @@ const ProfilePage = () => {
   const { userId } = useParams();
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-  const url ='https://socialmediaserver-fwoj.onrender.com/';
+  const url ='https://socialmediaserver-fwoj.onrender.com';
 
   const getUser = async () => {
     const response = await fetch(`${url}/users/${userId}`, {

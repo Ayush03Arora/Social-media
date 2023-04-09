@@ -7,7 +7,7 @@ const AdvertWidget = () => {
   const dark = palette.neutral.dark;
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
-  const url = 'https://socialmediaserver-fwoj.onrender.com/';
+  const url = 'https://socialmediaserver-fwoj.onrender.com';
 
   return (
     <WidgetWrapper>
